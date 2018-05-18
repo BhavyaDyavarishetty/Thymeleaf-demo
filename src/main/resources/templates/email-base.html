@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Test</title>
+    <style>
+
+        @import url(https://fonts.googleapis.com/css?family=Lato:300,400); /*Calling our web font*/
+
+        /* Some resets and issue fixes */
+        #outlook a {
+            padding: 0;
+        }
+
+        body {
+            width: 100% !important;
+            -webkit-text;
+            size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .ReadMsgBody {
+            width: 100%;
+        }
+
+        .ExternalClass {
+            width: 100%;
+        }
+
+        .backgroundTable {
+            margin: 0 auto;
+            padding: 0;
+            width: 100%;
+        !important;
+        }
+
+        table td {
+            border-collapse: collapse;
+        }
+
+        .ExternalClass * {
+            line-height: 115%;
+        }
+
+        /* End reset */
+
+        /* These are our tablet/medium screen media queries */
+        @media screen and (max-width: 630px) {
+
+            /* Display block allows us to stack elements */
+            *[class="mobile-column"] {
+                display: block;
+            }
+
+            /* Some more stacking elements */
+            *[class="mob-column"] {
+                float: none !important;
+                width: 100% !important;
+            }
+
+            /* Hide stuff */
+            *[class="hide"] {
+                display: none !important;
+            }
+
+            /* This sets elements to 100% width and fixes the height issues too, a god send */
+            *[class="100p"] {
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            /* For the 2x2 stack */
+            *[class="condensed"] {
+                padding-bottom: 40px !important;
+                display: block;
+            }
+
+            /* Centers content on mobile */
+            *[class="center"] {
+                text-align: center !important;
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            /* 100percent width section with 20px padding */
+            *[class="100pad"] {
+                width: 100% !important;
+                padding: 20px;
+            }
+
+            /* 100percent width section with 20px padding left & right */
+            *[class="100padleftright"] {
+                width: 100% !important;
+                padding: 0 20px 0 20px;
+            }
+
+            /* 100percent width section with 20px padding top & bottom */
+            *[class="100padtopbottom"] {
+                width: 100% !important;
+                padding: 20px 0px 20px 0px;
+            }
+
+        }
+
+    </style>
+
+</head>
+<body style="padding:0; margin:0" bgcolor="#687079">
+
+<table border="0" cellpadding="0" cellspacing="0" style="margin: 0; padding: 0;" width="100%">
+    <tr>
+        <td align="center" valign="top">
+
+            <table width="640" border="0" cellspacing="0" cellpadding="0" class="hide">
+                <tr>
+                    <td height="0"></td>
+                </tr>
+            </table>
+            <!--Header-->
+            <table width="640" cellspacing="0" cellpadding="0" bgcolor="#" class="100p">
+                <tr>
+                    <td bgcolor="#000000" width="640" valign="top" class="100p">
+                        <!--[if gte mso 9]>
+                        <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false"
+                                style="width:640px;">
+                            <v:fill type="tile" src="images/header-bg.jpg" color="#3b464e"/>
+                            <v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">
+                        <![endif]-->
+                        <div>
+                            <table width="640" border="0" cellspacing="0" cellpadding="20" class="100p">
+                                <tr>
+                                    <td valign="top">
+                                        <table border="0" cellspacing="0" cellpadding="0" width="600" class="100p">
+                                            <tr>
+                                                <td height="5"></td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" style="color:#FFFFFF; font-size:24px;"><a
+                                                        href="https://www.advisar.com">
+                                                    <img height="32" width="92"
+                                                         src="data:image/gif;base64,R0lGODlhuQBAAIABAP///////yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxNyAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFREUxQ0Q2MEIxQ0IxMUU3QTJBRENDM0NCNTMzNTkwQiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFREUxQ0Q2MUIxQ0IxMUU3QTJBRENDM0NCNTMzNTkwQiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjAxMzc0OEZGQjFDQTExRTdBMkFEQ0MzQ0I1MzM1OTBCIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjAxMzc0OTAwQjFDQTExRTdBMkFEQ0MzQ0I1MzM1OTBCIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAQAAAQAsAAAAALkAQAAAAv+Mj6mr4A8jYLTai7PevHskheL0leaJpujIjuoLx7LW1u6M53pZV/0ODAoNrE5xiEymRKuQ8gmlSWDOqPV6qFKn2K6SiwN7xzpxOEJOz8w5tvrtcbfR8Hoc8sXb95sH1M8XKDhIWGh4iJiouMjY6PgIGQmil2HjgEGHSTkJaNHCs6lpSXKhVTp6SSHXEErUmjB696qKmuqzylp727lrCzvritqHm1tLWpzpaXz8C5w1m9wsLEXMaUxr2qvLEI2M7WvNG9zNzVS5DD4+Qe79Lf7szB7ALq/OXH5ZH376Po+nb0/bPXjpCA40iK+gNFH5nO1T9o4OQH8O5ViMB60atVT/EwF2y+QxZD91C/TR+2GEUseK0ZKJHPmw5EeWMLcxPPbyWkySAvkp5IkQ4k+Klm5KOxhuWtCdMh0SRfoUp9OcKBPeM7ms3dGeQqE+Nej1680jVpsOjWpD61Z3YbF2WgnTp7yTcW2uNYuUWDU0GuudjVo2sOCkyPICw9X3n1OghLsOVnu3MVPIS/H+tbdY7NGhbtz+pMtLb8as57JpsxrRtGbUjyXDLYiOgzmjqIsWltsabEDchdPK1li59ye8Y4mzXc016XBZcSlvJru5NGyas3krr848bGS2iDMD3m5ckvjx5MubP48+vfr1KpqzL+89hvv3Z+bLj0+//cQXwPNvRcEPCoD+LbGfCf0NeJ+AG12GYH0KCqRdg3MUOFaEEk5IYW0WXojhgZjZxyEQy3H3YIhroDOiiV6gqJqKY7Do4iBKxQhDAQA7"
+                                                         alt="Advisar Logo">
+                                                </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="5"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!--[if gte mso 9]>
+                        </v:textbox>
+                        </v:rect>
+                        <![endif]-->
+                    </td>
+                </tr>
+            </table>
+            <!--End Header-->
+            <!--Title-->
+            <table width="640" border="0" cellspacing="0" cellpadding="20" bgcolor="#c8102e" class="100p">
+                <tr>
+                    <td align="center" style="font-size:24px; color:#FFFFFF; font-weight: 300"><font style="font-weight: 300" face="'Lato', Arial, sans-serif">[(${contenttitle})]</font>
+                    </td>
+                </tr>
+            </table>
+            <!--End Title-->
+            <table width="640" border="0" cellspacing="0" cellpadding="20" bgcolor="#ffffff" class="100p">
+                <tr>
+                    <td width="5"></td>
+                    <td align="left" style="font-size:16px; color:#848484;"><font face="'Lato', Arial, sans-serif">
+                        <span style="font-size:16px;">[(${contenttext})]</span></font>
+                    </td>
+                    <td width="5"></td>
+                </tr>
+            </table>
+            <!--Button-->
+            <table width="640" border="0" cellspacing="0" cellpadding="20" bgcolor="#ffffff" class="100p">
+                <tr>
+                    <td align="center">
+                        <a th:href="@{${loginurl}}"
+                           style="background-color:#c8102e;border-radius:4px;color:#ffffff;display:inline-block;font-family:'Lato',Arial,sans-serif;font-size:13px;font-weight:bold;letter-spacing: 0.5px;line-height:40px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;">LOGIN</a>
+                    </td>
+                </tr>
+            </table>
+            <!--End Button-->
+            <!--Footer-->
+            <table width="640" border="0" cellspacing="0" cellpadding="18" bgcolor="#303030" class="100p">
+                <tr>
+                    <td align="left" width="39%" style="font-size:14px; color:#c6c6c6;">
+                        <table>
+                            <tr>
+                                <td>
+                                        <span style="color: #c6c6c6; text-decoration: none; font-weight: 300"><font
+                                                face="'Lato', Arial, sans-serif"
+                                                color="#c6c6c6">© [(${currentyear})] Advisar™</font></span></td>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td align="right" width="61%" style="font-size:14px; color:#c6c6c6;">
+                        <table>
+                            <tr>
+                                <td><a style="color: #c6c6c6; text-decoration: none; font-weight: 300; letter-spacing: 0.5px"
+                                       href="https://www.masonite.com/corporate/about-us/privacy-and-legal"><span
+                                        style="color: #c6c6c6; text-decoration: none; font-weight: 300"><font
+                                        face="'Lato', Arial, sans-serif"
+                                        color="#c6c6c6">Privacy Policy</font></span></a></td>
+                                <td align="center" width="10">|</td>
+                                <td><a style="color: #c6c6c6; text-decoration: none; font-weight: 300; letter-spacing: 0.5px" href="https://www.advisar.com/residential/termsofsale">
+                                        <span style="color: #c6c6c6; text-decoration: none; font-weight: 300; letter-spacing: 0.5px"><font face="'Lato', Arial, sans-serif"
+                                                                                                                                           color="#c6c6c6">Terms of Use</font></span></a></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <!--End Footer-->
+            <table width="640" class="100p" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td height="0"></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
