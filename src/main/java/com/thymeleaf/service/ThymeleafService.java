@@ -16,9 +16,9 @@ public class ThymeleafService {
 
     private final SendGrid sendGrid;
     private TemplateEngine templateEngine;
-    private final String MY_WORK_EMAIL = "bdyavarishetty@masonite.com";
-    private final String MY_PERSONAL_EMAIL = "bhavya.1316@gmail.com";
-    private final String MY_NAME = "Bhavya Dyavarishetty";
+    private final String MY_WORK_EMAIL = "work@gmail.com";
+    private final String MY_PERSONAL_EMAIL = "personal@gmail.com";
+    private final String MY_NAME = "Name";
     private static final String REQUEST_ENDPOINT = "mail/send";
 
     @Autowired
@@ -29,13 +29,8 @@ public class ThymeleafService {
 
     public void sendEmail() {
         Context context = new Context();
-//        context.setVariable("name", MY_NAME);
-//        context.setVariable("subscriptionDate", new Date());
-//        context.setVariable("hobbies", Arrays.asList("Cinema", "Sports", "Music"));
-//        context.setVariable("imageResourceName", imageResourceName);
-
         context.setVariable("contenttitle", "Thymeleaf Goal");
-        context.setVariable("contenttext", "It works. I am so happy. I am grateful to Josh");
+        context.setVariable("contenttext", "It works. I am so happy.");
         context.setVariable("loginurl", "www.google.com");
         context.setVariable("currentyear", new Date().getYear());
 

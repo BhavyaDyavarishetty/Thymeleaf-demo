@@ -9,6 +9,7 @@ import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.templatemode.TemplateMode;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 import org.thymeleaf.templateresolver.ITemplateResolver;
+import org.thymeleaf.templateresolver.StringTemplateResolver;
 
 import java.nio.charset.StandardCharsets;
 
@@ -17,7 +18,7 @@ public class ThymeleafConfig {
 
     @Bean
     public SendGrid sendGrid() {
-        return new SendGrid("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");
+        return new SendGrid("sendgridKey");
     }
 
     @Bean
@@ -25,14 +26,13 @@ public class ThymeleafConfig {
         final TemplateEngine templateEngine = new TemplateEngine();
         templateEngine.addTemplateResolver(textTemplateResolver());
         templateEngine.addTemplateResolver(htmlTemplateResolver());
-//        templateEngine.addTemplateResolver(stringTemplateResolver());
+        templateEngine.addTemplateResolver(stringTemplateResolver());
         return templateEngine;
     }
 
     private ITemplateResolver textTemplateResolver() {
         final ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
         templateResolver.setOrder(1);
-//        templateResolver.setResolvablePatterns(Collections.singleton("text/*"));
         templateResolver.setPrefix("/mail/");
         templateResolver.setSuffix(".txt");
         templateResolver.setTemplateMode(TemplateMode.TEXT);
@@ -44,7 +44,6 @@ public class ThymeleafConfig {
     private ITemplateResolver htmlTemplateResolver() {
         final ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
         templateResolver.setOrder(2);
-//        templateResolver.setResolvablePatterns(Collections.singleton("html/*"));
         templateResolver.setPrefix("/mail/");
         templateResolver.setSuffix(".html");
         templateResolver.setTemplateMode(TemplateMode.HTML);
@@ -53,12 +52,12 @@ public class ThymeleafConfig {
         return templateResolver;
     }
 
-//    private ITemplateResolver stringTemplateResolver() {
-//        final StringTemplateResolver templateResolver = new StringTemplateResolver();
-//        templateResolver.setOrder(3);
-//        // No resolvable pattern, will simply process as a String template everything not previously matched
-//        templateResolver.setTemplateMode("HTML5");
-//        templateResolver.setCacheable(false);
-//        return templateResolver;
-//    }
+    private ITemplateResolver stringTemplateResolver() {
+        final StringTemplateResolver templateResolver = new StringTemplateResolver();
+        templateResolver.setOrder(3);
+        // No resolvable pattern, will simply process as a String template everything not previously matched
+        templateResolver.setTemplateMode("HTML5");
+        templateResolver.setCacheable(false);
+        return templateResolver;
+    }
 }
